@@ -170,7 +170,6 @@ function score(){
             document.getElementById("playerScore").innerHTML= 0;
             document.getElementById("bootScore").innerHTML=0;
             console.log("zero")
-            
         }
       }
          
