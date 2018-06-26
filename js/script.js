@@ -148,55 +148,41 @@ function playerPosition(e) {
 
 
 function score(){
-   
+    var playerscore= document.getElementById("playerScore");
+    var bootscore= document.getElementById("bootScore");
+    
     if (ballX<playerX)
     {
         
-        var playerscore= document.getElementById("playerScore").innerHTML++;
+       var addbpoints=playerscore.innerHTML++;
          clearInterval(play);
-         if (playerscore==3){
+         if (addbpoints==3){
             
-             document.getElementById("playerScore").innerHTML= 0;
-             document.getElementById("bootScore").innerHTML=0;
+            playerscore.innerHTML= 0;
+            bootscore.innerHTML=0;
              console.log("zeroooooo")
          }
         
         }
     else if(ballX>bootX){
-       var bootscore= document.getElementById("bootScore").innerHTML++;
+        var addbpoints= bootscore.innerHTML++;
         clearInterval(play);
-        if (bootscore==2){
+        if (addbpoints==3){
              
-            document.getElementById("playerScore").innerHTML= 0;
-            document.getElementById("bootScore").innerHTML=0;
+            playerscore.innerHTML= 0;
+            bootscore.innerHTML=0;
             console.log("zero")
         }
       }
-         
-
     } 
 
-
- 
-  
-// var play=setInterval(game, 1)
- 
-
-    
-
-
-
-
 function game() {
-    
     table();
-    
     ball();
     //bootMove()
     ballHit();
     score()
-    player();
     boot();
     ballMove();
-        
+    player();    
 } 
