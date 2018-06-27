@@ -133,24 +133,13 @@ function playerPosition(e) {
    
 }
  
-// gameOver()
-//  {
-//      var victory= document.createElement("p");
-//      victory.style.color="red";
-//      victory.className="victory";
-    
-//      var przegrałes=victory.innerHTML=["przegrałes","wygrałes"];
-//      var body = document.querySelector("body");
-//      var newChildNode = body.appendChild(victory);
-     
-//  }     
 
 
 
 function score(){
     var playerscore= document.getElementById("playerScore");
     var bootscore= document.getElementById("bootScore");
-    
+    var x = document.createElement("div");
     if (ballX<playerX)
     {
         
@@ -171,7 +160,13 @@ function score(){
              
             playerscore.innerHTML= 0;
             bootscore.innerHTML=0;
-            console.log("zero")
+            
+            x.style.color="red";
+            x.className="text";
+            x.innerHTML="you loose";
+            var body= document.querySelector("body");
+            var newChild= body.appendChild(x);
+
         }
       }
     } 
